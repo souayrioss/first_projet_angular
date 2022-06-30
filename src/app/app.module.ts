@@ -1,26 +1,35 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { GuardService } from './service/guard.service';
+import { PostService } from './service/post.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AboutComponent } from './about/about.component';
 import { PostsComponent } from './posts/posts.component';
-import { CreateComponent } from './posts/create/create.component';
-import { ShowComponent } from './posts/show/show.component';
+import { DetailsComponent } from './posts/details/details.component';
+import { AdminComponent } from './admin/admin.component';
+import { HomeComponent } from './home/home.component';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { HttpClientModule } from '@angular/common/http';
+import { PlaceholderComponent } from './placeholder/placeholder.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent,
     PostsComponent,
-    CreateComponent,
-    ShowComponent
+    DetailsComponent,
+    AdminComponent,
+    HomeComponent,
+    PlaceholderComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LazyLoadImageModule,
+    HttpClientModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    GuardService ,PostService
+  ],
+  bootstrap: [AppComponent  ]
 })
 export class AppModule { }

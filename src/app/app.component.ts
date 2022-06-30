@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'first_project_angular';
+
+  name : string = '';
+  email : string = '';
+
+  send():void {
+    console.log(this.name + " " + this.email)
+
+  }
 }

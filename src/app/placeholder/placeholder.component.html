@@ -1,0 +1,20 @@
+<p>placeholder works!</p>
+<table class="border" border="2" [width]="1500">
+    <thead class="border">
+        <tr>
+            <th>id</th>
+            <th>userId</th>
+            <th>Title</th>
+            <th>body</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="border " *ngFor="let user of users">
+            <td class="border p-2">{{user.id}}</td>
+            <td class="border p-2">{{user.userId}}</td>
+            <td class="border p-2">{{user.title}}</td>
+            <td class="border p-2">{{user.body}}</td>
+        </tr>
+
+    </tbody>
+</table>
